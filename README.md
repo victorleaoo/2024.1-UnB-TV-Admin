@@ -19,7 +19,7 @@ Primeiro passo é instalar o docker e docker compose, para isso siga os passos d
 Execute o servidor local:
 
 ```
-docker compose up
+docker compose up --bluid
 ```
 
 Acessar o localhost em: http://localhost:8080
