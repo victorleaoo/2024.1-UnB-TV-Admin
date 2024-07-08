@@ -12,7 +12,7 @@
 
 ## Requisitos
 
--   docker e docker compose
+-   docker -> docker compose
 
 Primeiro passo é instalar o docker e docker compose, para isso siga os passos de instalação do [docker](https://docs.docker.com/engine/install/) e [docker compose](https://docs.docker.com/compose/install/).
 
