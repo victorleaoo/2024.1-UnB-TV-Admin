@@ -16,6 +16,7 @@ MAIL_PASSWORD=os.getenv("MAIL_PASSWORD")
 MAIL_FROM=os.getenv("MAIL_FROM")
 MAIL_PORT=os.getenv("MAIL_PORT")
 MAIL_SERVER=os.getenv("MAIL_SERVER")
+MAIL_FROM_NAME=os.getenv("MAIL_FROM_NAME")
 
 conf = ConnectionConfig(
     MAIL_USERNAME = MAIL_USERNAME,
@@ -23,6 +24,7 @@ conf = ConnectionConfig(
     MAIL_FROM = MAIL_FROM,
     MAIL_PORT = MAIL_PORT,
     MAIL_SERVER = MAIL_SERVER,
+    MAIL_FROM_NAME = MAIL_FROM_NAME,
     MAIL_STARTTLS = False,
     MAIL_SSL_TLS = True,
     USE_CREDENTIALS = True,
@@ -52,7 +54,8 @@ async def simple_send(email: EmailSchema) -> JSONResponse:
         subject="Sugestão de Pauta",
         recipients=email.recipients,
         body=html,
-        subtype=MessageType.html)
+        subtype=MessageType.html
+    )
 
     fm = FastMail(conf)
     await fm.send_message(message)

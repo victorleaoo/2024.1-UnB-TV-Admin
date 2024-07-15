@@ -9,7 +9,7 @@ from src.main import app
 async def test_simple_send():
     
     test_email_data = {
-        "recipients": ["ricardoloureiro75@gmail.com"],
+        "recipients": ["victor.pessoal1203@gmail.com"],
         "tema": "Exemplo de Tema",
         "descricao": "Exemplo de Descrição",
         "quando": "Exemplo de Quando",
@@ -22,6 +22,5 @@ async def test_simple_send():
     
     async with AsyncClient(app=app, base_url="http://test") as ac:
         response = await ac.post("/api/pauta/email", json=test_email_data)
-
     
     assert response.status_code == 200
