@@ -9,7 +9,7 @@ from src.main import app
 async def test_simple_send():
     
     test_email_data = {
-        "recipients": ["victor.pessoal1203@gmail.com"],
+        "recipients": ["unbtv20241@gmail.com"],
         "tema": "Exemplo de Tema",
         "descricao": "Exemplo de Descrição",
         "quando": "Exemplo de Quando",
