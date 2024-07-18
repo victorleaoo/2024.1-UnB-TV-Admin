@@ -53,7 +53,10 @@ def get_latest_release():
 
 def new_tag_name():
     old_tag = get_latest_release()
-    old_version = version.parse(old_tag)
+    try:
+        old_version = version.parse(old_tag)
+    except version.InvalidVersion:
+        old_version = version.parse('0.0.0')
 
     if RELEASE_MAJOR == 'true':
         return f'{old_version.major + 1}.0.0'
@@ -61,8 +64,6 @@ def new_tag_name():
         return f'{old_version.major}.{old_version.minor + 1}.0'
     elif RELEASE_FIX == 'true':
         return f'{old_version.major}.{old_version.minor}.{old_version.micro + 1}'
-    elif DEVELOP == 'true':
-        return 'develop'
     else:
         return f'{old_version.major}.{old_version.minor}.{old_version.micro + 1}'
 
