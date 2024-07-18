@@ -4,7 +4,7 @@ on: push
 
 jobs:
   release:
-    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'NOT RELEASE') == false
+    #if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'NOT RELEASE') == false
     runs-on: "ubuntu-latest"
     environment: actions
     
