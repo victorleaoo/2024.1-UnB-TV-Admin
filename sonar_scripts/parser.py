@@ -47,7 +47,10 @@ def get_latest_release():
     response = requests.get(url, headers=headers)
     releases = response.json()
 
+    print("Len releases: ", len(releases))
+    
     if len(releases) > 0:
+        print("releases[0].get('tag_name', '0.0.0')", releases[0].get('tag_name', '0.0.0'))
         return releases[0].get('tag_name', '0.0.0')
     return '0.0.0'
 
