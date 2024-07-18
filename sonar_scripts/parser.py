@@ -10,17 +10,17 @@ from packaging import version
 
 load_dotenv()
 
-# Configurar as variáveis de ambiente
+# Variáveis globais ao repositório
 OWNER = "fga-eps-mds"
 REPO = "2024.1-UnB-TV-Admin"
-GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
+TODAY = datetime.now()
 
+# Configurar as variáveis de ambiente
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
 RELEASE_MAJOR = os.getenv('RELEASE_MAJOR')
 RELEASE_MINOR = os.getenv('RELEASE_MINOR')
 RELEASE_FIX = os.getenv('RELEASE_FIX')
 DEVELOP = os.getenv('DEVELOP')
-
-TODAY = datetime.now()
 
 METRICS_SONAR = [
     'files',
