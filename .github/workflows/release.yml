@@ -1,11 +1,6 @@
 name: Export de métricas
 
-on:
-  pull_request:
-    branches:
-      - main
-      - develop
-    types: [closed]
+on: push
 
 jobs:
   release:
