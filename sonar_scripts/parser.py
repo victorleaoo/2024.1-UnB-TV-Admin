@@ -49,8 +49,7 @@ def get_latest_release():
 
     print("Len releases: ", len(releases))
     
-    if len(releases) > 0:
-        print("releases[0].get('tag_name', '0.0.0')", releases[0].get('tag_name', '0.0.0'))
+    if releases:
         return releases[0].get('tag_name', '0.0.0')
     return '0.0.0'
 
