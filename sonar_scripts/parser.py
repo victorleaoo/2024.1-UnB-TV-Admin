@@ -46,8 +46,6 @@ def get_latest_release():
     }
     response = requests.get(url, headers=headers)
     releases = response.json()
-
-    print(releases)
     
     if releases:
         return releases[0].get('tag_name', '0.0.0')
