@@ -22,6 +22,7 @@ RELEASE_MINOR = os.getenv('RELEASE_MINOR')
 RELEASE_FIX = os.getenv('RELEASE_FIX')
 DEVELOP = os.getenv('DEVELOP')
 
+# Configurar as variáveis do sonar
 METRICS_SONAR = [
     'files',
     'functions',
@@ -39,6 +40,7 @@ METRICS_SONAR = [
 
 BASE_URL = 'https://sonarcloud.io/api/measures/component_tree?component=fga-eps-mds_'
 
+# Pega a última release
 def get_latest_release():
     url = f'https://api.github.com/repos/{OWNER}/{REPO}/releases'
     headers = {
@@ -51,6 +53,7 @@ def get_latest_release():
         return releases[0].get('tag_name', '0.0.0')
     return '0.0.0'
 
+# Cria um novo nome de tag
 def new_tag_name():
     old_tag = get_latest_release()
     try:
@@ -67,6 +70,7 @@ def new_tag_name():
     else:
         return f'{old_version.major}.{old_version.minor}.{old_version.micro + 1}'
 
+# Cria a nova release
 def create_release():
     tag = new_tag_name()
     url = f'https://api.github.com/repos/{OWNER}/{REPO}/releases'
