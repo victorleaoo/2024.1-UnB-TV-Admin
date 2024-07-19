@@ -19,7 +19,7 @@ jobs:
       - name: Cria arquivo .env
         run: |
           touch ./sonar_scripts/.env
-          echo TOKEN=${{ secrets.API_TOKEN_GITHUB }} >> ./sonar_scripts/.env
+          echo GITHUB_TOKEN=${{ secrets.API_TOKEN_GITHUB }} >> ./sonar_scripts/.env
           echo RELEASE_MAJOR=${{ contains(github.event.pull_request.labels.*.name, 'MAJOR RELEASE') }} >> ./sonar_scripts/.env
           echo RELEASE_MINOR=${{ contains(github.event.pull_request.labels.*.name, 'MINOR RELEASE') }} >> ./sonar_scripts/.env
           echo RELEASE_FIX=${{ contains(github.event.pull_request.labels.*.name, 'FIX RELEASE') }} >> ./sonar_scripts/.env
