@@ -2,7 +2,6 @@ name: Sync com PR
 
 on:
   repository_dispatch:
-    types: [sync-upstream]
 
 jobs:
   sync:
