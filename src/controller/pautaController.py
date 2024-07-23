@@ -50,6 +50,7 @@ async def simple_send(email: EmailSchema) -> JSONResponse:
     </html>
     """
 
+    # Cria estrutura de e-mail
     message = MessageSchema(
         subject="Sugestão de Pauta",
         recipients=email.recipients,
