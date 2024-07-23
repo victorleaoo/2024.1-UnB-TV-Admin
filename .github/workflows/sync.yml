@@ -1,7 +1,8 @@
 name: Sync com PR
 
 on:
-  repository_dispatch:
+  push:
+  #repository_dispatch:
 
 jobs:
   sync:
