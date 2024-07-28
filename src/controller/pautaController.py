@@ -46,6 +46,7 @@ async def simple_send(email: EmailSchema) -> JSONResponse:
         <p>Responsável: {email.responsavel}</p>
         <p>Telefone do Responsável: {email.telefone_responsavel}</p>
         <p>Email para Contato: {email.email_contato}</p>
+        <p>URL do video: {email.url_video}</p>
     </body>
     </html>
     """
