@@ -16,7 +16,8 @@ async def test_simple_send():
         "local": "Exemplo de Local",
         "responsavel": "Exemplo de Responsável",
         "telefone_responsavel": "Exemplo de Telefone",
-        "email_contato": "geraldovictor@outlook.com"
+        "email_contato": "geraldovictor@outlook.com",
+        "url_video": "https://www.youtube.com/watch?v=yTpI3blS2eE",
     }
 
     

@@ -10,3 +10,4 @@ class EmailSchema(BaseModel):
     responsavel: str
     telefone_responsavel: str
     email_contato: str
+    url_video: str
